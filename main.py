@@ -136,19 +136,19 @@ Saved_Model.predict(X)
 import pickle 
 print("[INFO] Saving model...")
 # Save the trained model as a pickle string. 
-saved_model=pickle.dump(kmeans,open('/content/secondmidkmeans.pkl', 'wb')) 
+saved_model=pickle.dump(kmeans,open('secondmidkmeans.pkl', 'wb')) 
 # Saving model to disk
 
 # Load the pickled model 
-model = pickle.load(open('/content/secondmidkmeans.pkl','rb'))  
+model = pickle.load(open('secondmidkmeans.pkl','rb'))  
 # Use the loaded pickled model to make predictions 
 model.predict(X)
 
-!pip install streamlit
+#!pip install streamlit
 
-!pip install pyngrok
+#!pip install pyngrok
 
-!ngrok authtoken 1sO9O2v7CGlRWPKUgjrtmB7tWIa_6unaAnmQHqgRwQhgTz8Jg
+#!ngrok authtoken 1sO9O2v7CGlRWPKUgjrtmB7tWIa_6unaAnmQHqgRwQhgTz8Jg
 
 # Commented out IPython magic to ensure Python compatibility.
 # %%writefile app.py
@@ -210,11 +210,11 @@ model.predict(X)
 # if __name__=='__main__':
 #   main()
 
-!nohup streamlit run  app.py &
+#!nohup streamlit run  app.py &
 
-from pyngrok import ngrok
-url=ngrok.connect(port='8050')
-url
+#from pyngrok import ngrok
+#url=ngrok.connect(port='8050')
+#url
 
-!streamlit run --server.port 80 app.py
+#!streamlit run --server.port 80 app.py
 
