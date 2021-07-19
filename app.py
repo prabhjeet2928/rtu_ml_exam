@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 st.set_option('deprecation.showfileUploaderEncoding', False)
 # Load the pickled model
-model = pickle.load(open('/content/secondmidkmeans.pkl','rb'))   
-dataset= pd.read_csv('/content/clustering dataset 33.csv')
+model = pickle.load(open('secondmidkmeans.pkl','rb'))   
+dataset= pd.read_csv('clustering dataset 33.csv')
 X = dataset.iloc[:, [0,1,2,3,4,5,6,7,8]].values
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
